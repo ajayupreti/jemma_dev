@@ -1,0 +1,58 @@
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*general styles*/
+body {
+	height: 100%;
+	font-family: 'Montserrat';
+	background: #f9f9f9;
+}
+h4.ui{
+	margin-top:8px !important;
+}
+
+/*header style*/
+.menu{
+	 background: #333 !important;
+	 border-radius: 0px !important;
+	 height: auto;
+	 padding-bottom: 16px;
+}
+.header-img{
+	margin-top: 15px !important;
+}
+
+/*form tabs style*/
+.ui.steps .step{
+    width: 16%;	
+    font-size: 9pt;
+    padding:10px;
+}
+.ui.ordered.steps .step:before{
+    display: none;
+}
+.ui.ordered.steps{
+    width: 100%;
+    margin-top: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+}
+
+/*form style*/
+.success-msg , .form-step1 , .form-step2 , .form-step3 , .form-step5 , .form-step4 , .form-step6{
+	 margin-top: 15px;
+	 box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+}
+.heading{
+	margin-bottom: 10px;
+}
+.ribbon{
+	font-size:18px !important;
+	letter-spacing: 0.3px;
+}
+.ui.message{
+	 box-shadow: none !important;
+}
+.next2{
+	margin-top: 15px !important;
+
+}

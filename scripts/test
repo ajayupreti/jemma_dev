@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Write the test execution from the tests folder
+phpunit ../tests/Tests.php

@@ -1,0 +1,63 @@
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*general styles*/
+body {
+	height: 100%;
+	font-family: 'Montserrat';
+	background: #f9f9f9 !important;
+    overflow: hidden;
+}
+body > .grid{
+height: 100%;
+}
+.column {
+max-width: 500px;
+}
+
+/*header style*/
+.menu{
+	 background: #333 !important;
+	 border-radius: 0px !important;
+	 height: auto;
+	 padding-bottom: 16px;
+}
+.header-img{
+	margin-top: 15px;
+}
+
+/*form style*/
+.form-heading{
+font-weight: 400;
+font-size: 16pt;
+}
+.login-box , .forget-password-box{
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+}
+.submit-btn{
+font-weight: 400;
+}
+.stacked{
+padding: 25px 20px 30px !important;
+}
+.border-top{
+padding: 10px;
+border-top:1px solid #ccc;
+margin-top: 20px;
+font-size: 11pt;
+}
+.forgot{
+font-size: 11pt;
+}
+.center-div{
+margin-top:70px;
+}
+.login-div{
+background: #fff; 
+}
+h2.header{
+margin-bottom: 20px !important;
+}
+.column {
+max-width: 530px !important;
+}
