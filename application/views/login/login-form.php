@@ -1,7 +1,7 @@
 <div class="login-box">
 
  <?php echo $this->session->flashdata('error_msg'); ?>
-  <form id="f1" method="post" action="<?php echo base_url(); ?>login/login_user" class="ui large form">
+  <form id="f1" method="post" action="<?php echo base_url(); ?>login" class="ui large form">
 
       <div class="ui stacked login-div">
 

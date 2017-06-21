@@ -1,7 +1,8 @@
 <?php
-class User_model extends CI_model{
-
-
+class Login_model extends CI_Model{
+  function __construct(){
+    parent::__construct();
+  }
 public function login_user($email,$pass)
 {
 
