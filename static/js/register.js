@@ -124,24 +124,6 @@ $('.form1').form({
           }
 });
 
-// (function ($) {
-//     $.fn.serializeFormJSON = function () {
-
-//    var o = {};
-//     var a = this.serializeArray();
-//     $.each(a, function() {
-//         if (o[this.name] !== undefined) {
-//             if (!o[this.name].push) {
-//                 o[this.name] = [o[this.name]];
-//             }
-//             o[this.name].push(this.value || '');
-//         } else {
-//             o[this.name] = this.value || '';
-//         }
-//     });
-//     return o;
-//     };
-// })(jQuery);
 
 
 function validationpassed(e) {
@@ -164,25 +146,57 @@ function validationpassed(e) {
       dob : dob_val ,
       role : role_val
     }
-
- var posting = $.post(mainurl+'register/1', objectpd);
-  console.log(objectpd);
-  posting.done(function(data){
-            if(data.status=="sucess"){
-                                $('.form-step1').hide();
-                                $('.form-step2').show();
-                                $('.tab1').removeClass('active');
-                                $('.tab2').addClass('active');
-                                return false;
+console.log(objectpd);
+$.ajax({
+    url: mainurl+'register/1',
+    type: 'POST',
+    data: objectpd,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
+    },
+    success: function (data) {
+      console.info(data);
+        if(data.STATUS=="SUCESS")
+            {
+                $('.form-step1').hide();
+                $('.form-step2').show();
+                $('.tab1').removeClass('active');
+                $('.tab2').addClass('active');
+                return false;
             }
-            else{
-              alert("error");
+            else
+            {
+             alert("error");
             }
-  });
-    posting.fail( function(xhr, textStatus, errorThrown) {
-      $(".show_msg").show();
-      $(".error_msg").html("server not responded");
-    });
+    },
+    error: function (data, status, error) {
+       $(".show_msg").show();
+       $(".error_msg").html("server not responded");
+    }
+});
+ // var posting = $.post(mainurl+'register/1', objectpd);
+ //  console.log(objectpd);
+ //  posting.done(function(data){
+ //            if(data.status=="sucess"){
+ //                                $('.form-step1').hide();
+ //                                $('.form-step2').show();
+ //                                $('.tab1').removeClass('active');
+ //                                $('.tab2').addClass('active');
+ //                                return false;
+ //            }
+ //            else{
+ //              alert("error");
+ //            }
+ //  });
+ //    posting.fail( function(xhr, textStatus, errorThrown) {
+ //      $(".show_msg").show();
+ //      $(".error_msg").html("server not responded");
+ //    });
   
      e.preventDefault();
 }
