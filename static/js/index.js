@@ -107,7 +107,7 @@ $.ajax({
     success: function (data) {
         console.info(data);
         if(data.STATUS=="SUCESS"){
-               $(location).attr('href', 'http://localhost/jemaaa/jemma/dashboard.php');
+               $(location).attr('href', 'http://104.198.18.135/jemma/dashboard.php');
             }
             else{
               $(".show_msg").show();
@@ -118,6 +118,7 @@ $.ajax({
       console.log('error', data, status, error);
     }
 });
+
  // var posting = $.post(mainurl+'login', objectl , function(response) {  //ERROR POINTS THIS LINE
  //    response.setContentType("application/json");
  //    response.setCharacterEncoding("UTF-8");

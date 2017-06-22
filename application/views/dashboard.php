@@ -9,7 +9,7 @@
 <!--  page header close here -->
 
  </head>
- <body onload="checkcookiedash()">
+ <body onload="getdata()">
  <div class="ui bottom attached  pushable">
 
  <!--  sidebar start here -->
