@@ -156,6 +156,9 @@ $.ajax({
                 else if(noforms==5){
                     $(location).attr('href', 'http://104.198.18.135/jemma/dashboard');
                 }
+                else {
+                  console.log(data);
+                }
             }
             else{
               $(".show_msg").show();
