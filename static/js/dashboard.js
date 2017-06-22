@@ -7,7 +7,7 @@ function employees(){
 	$('.employees_box').show();
 
 }
-public function getdata(){
+function getdata(){
  $.ajax({
     url: mainurl+'dashboard',
     type: 'POST',
