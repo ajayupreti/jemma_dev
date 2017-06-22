@@ -158,26 +158,54 @@ var password_val=$('.password').val();
 var objectf = {
   email : email_val 
 }
-
- var posting = $.post(mainurl+'forgotpassword', objectf);
-  console.log(objectf);
-
-  posting.done(function(data){
-            if(data.status=="sucess"){
-                 $(".show_msg").show();
-              $(".error_msg").html("email has been sent to your email id");
+console.log(objectf);
+$.ajax({
+    url: mainurl+'forgotpassword',
+    type: 'POST',
+    data: objectf,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
+    },
+    success: function (data) {
+        console.info(data);
+        if(data.STATUS=="SUCESS"){
+                $(".show_msg").show();
+                $(".error_msg").html("email has been sent to your email id");
             }
             else{
-              $(".show_msg").show();
-              $(".error_msg").html("email id not exist");
-
+             $(".show_msg").show();
+             $(".error_msg").html("email id not exist");
             }
-  });
+    },
+    error: function (data, status, error) {
+       $(".show_msg").show();
+       $(".error_msg").html("server not responded");
+    }
+});
+ // var posting = $.post(mainurl+'forgotpassword', objectf);
+ //  console.log(objectf);
 
-    posting.fail( function(xhr, textStatus, errorThrown) {
-      $(".show_msg").show();
-      $(".error_msg").html("server not responded");
-    });
+ //  posting.done(function(data){
+ //            if(data.status=="sucess"){
+ //                 $(".show_msg").show();
+ //              $(".error_msg").html("email has been sent to your email id");
+ //            }
+ //            else{
+ //              $(".show_msg").show();
+ //              $(".error_msg").html("email id not exist");
+
+ //            }
+ //  });
+
+ //    posting.fail( function(xhr, textStatus, errorThrown) {
+ //      $(".show_msg").show();
+ //      $(".error_msg").html("server not responded");
+ //    });
  e.preventDefault();
 
 
