@@ -408,8 +408,8 @@ $('.form3').form({
                
               ]
             },
-             ecmember: {
-              identifier  : 'ecmember',
+             ecnumber: {
+              identifier  : 'ecnumber',
               rules: [
                 {
                   type   : 'empty',
@@ -432,7 +432,7 @@ $('.form3').form({
           
         });
 
-function validationpassed3() {
+function validationpassed3(e) {
     var paddrs_val= $('.permanentaddr').val();
     var pcity_val= $('.city').val();
     var pstate_val= $('.state').val();
@@ -576,7 +576,7 @@ $('.form4').form({
           
         });
 
-        function validationpassed4() {
+        function validationpassed4(e) {
 
     var accntholrname_val = $('.accntholrname').val();
     var bankname_val= $('.bankname').val();
@@ -671,7 +671,7 @@ $.ajax({
 
               });
 
-          function validationpassed6() {
+          function validationpassed6(e) {
 
     var mobileno_val = $('.mobileno').val();
 
