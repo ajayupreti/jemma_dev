@@ -258,7 +258,7 @@ $.ajax({
     dataType: 'json',
     contentType: 'application/x-www-form-urlencoded; charset=utf-8',
     headers: {
-        "authentication": "obj",
+        "authentication": obj,
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
     },
@@ -459,25 +459,59 @@ function validationpassed3() {
         ecrelation : ecrelation_val 
 
     }
-   var posting = $.post(mainurl+'register/3', objectad);
-  console.log(objectad);
-  posting.done(function(data){
-            if(data.status=="sucess"){
-                    $('.form-step3').hide();
-                    $('.form-step4').show();
-                    $('.tab3').removeClass('active');
-                    $('.tab4').addClass('active');
-                     return false;
+console.log(objectad);
+$.ajax({
+    url: mainurl+'register/3',
+    type: 'POST',
+    data: objectad,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    headers: {
+        "authentication": obj,
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
+    },
+    success: function (data) {
+      console.info(data);
+        if(data.STATUS=="SUCESS")
+            {
+               $('.form-step3').hide();
+                $('.form-step4').show();
+                $('.tab3').removeClass('active');
+                $('.tab4').addClass('active');
+                return false;
             }
-            else{
-              alert("error");
+            else
+            {
+             alert("error");
             }
-  });
+    },
+    error: function (data, status, error) {
+       $(".show_msg").show();
+       $(".error_msg").html("server not responded");
+    }
+});
+  //  var posting = $.post(mainurl+'register/3', objectad);
+  // console.log(objectad);
+  // posting.done(function(data){
+  //           if(data.status=="sucess"){
+  //                   $('.form-step3').hide();
+  //                   $('.form-step4').show();
+  //                   $('.tab3').removeClass('active');
+  //                   $('.tab4').addClass('active');
+  //                    return false;
+  //           }
+  //           else{
+  //             alert("error");
+  //           }
+  // });
 
-      posting.fail( function(xhr, textStatus, errorThrown) {
-      $(".show_msg").show();
-      $(".error_msg").html("server not responded");
-    });
+  //     posting.fail( function(xhr, textStatus, errorThrown) {
+  //     $(".show_msg").show();
+  //     $(".error_msg").html("server not responded");
+  //   });
   
    e.preventDefault();
 
@@ -558,25 +592,59 @@ $('.form4').form({
         pancardno : pancardno_val 
 
     }
-   var posting = $.post(mainurl+'register/4', objectbd);
-  console.log(objectbd);
-  posting.done(function(data){
-            if(data.status=="sucess"){
+console.log(objectbd);
+$.ajax({
+    url: mainurl+'register/4',
+    type: 'POST',
+    data: objectbd,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    headers: {
+        "authentication": obj,
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
+    },
+    success: function (data) {
+      console.info(data);
+        if(data.STATUS=="SUCESS")
+            {
                   $('.form-step4').hide();
                   $('.form-step6').show();
                   $('.tab4').removeClass('active');
                   $('.tab6').addClass('active');
                   return false;
             }
-            else{
-              alert("error");
+            else
+            {
+             alert("error");
             }
-  });
+    },
+    error: function (data, status, error) {
+       $(".show_msg").show();
+       $(".error_msg").html("server not responded");
+    }
+});
+  //  var posting = $.post(mainurl+'register/4', objectbd);
+  // console.log(objectbd);
+  // posting.done(function(data){
+  //           if(data.status=="sucess"){
+  //                 $('.form-step4').hide();
+  //                 $('.form-step6').show();
+  //                 $('.tab4').removeClass('active');
+  //                 $('.tab6').addClass('active');
+  //                 return false;
+  //           }
+  //           else{
+  //             alert("error");
+  //           }
+  // });
 
-      posting.fail( function(xhr, textStatus, errorThrown) {
-      $(".show_msg").show();
-      $(".error_msg").html("server not responded");
-    });
+  //     posting.fail( function(xhr, textStatus, errorThrown) {
+  //     $(".show_msg").show();
+  //     $(".error_msg").html("server not responded");
+  //   });
   
              e.preventDefault();
 
@@ -611,26 +679,59 @@ $('.form4').form({
         mobileno : mobileno 
 
     }
-
-   var posting = $.post(mainurl+'register/6', objectsd);
-  console.log(objectsd);
-  posting.done(function(data){
-            if(data.status=="sucess"){
+console.log(objectsd);
+$.ajax({
+    url: mainurl+'register/6',
+    type: 'POST',
+    data: objectsd,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    headers: {
+        "authentication": obj,
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
+    },
+    success: function (data) {
+      console.info(data);
+        if(data.STATUS=="SUCESS")
+            {
                         $('.form-step6').hide();
                         $('.ui.ordered.steps').hide();
                         $('.success-msg').show();
                         $('.tab6').removeClass('active');
                         return false;
             }
-            else{
-              alert("error");
+            else
+            {
+             alert("error");
             }
-  });
+    },
+    error: function (data, status, error) {
+       $(".show_msg").show();
+       $(".error_msg").html("server not responded");
+    }
+});
+  //  var posting = $.post(mainurl+'register/6', objectsd);
+  // console.log(objectsd);
+  // posting.done(function(data){
+  //           if(data.status=="sucess"){
+  //                       $('.form-step6').hide();
+  //                       $('.ui.ordered.steps').hide();
+  //                       $('.success-msg').show();
+  //                       $('.tab6').removeClass('active');
+  //                       return false;
+  //           }
+  //           else{
+  //             alert("error");
+  //           }
+  // });
 
-        posting.fail( function(xhr, textStatus, errorThrown) {
-      $(".show_msg").show();
-      $(".error_msg").html("server not responded");
-    });
+  //       posting.fail( function(xhr, textStatus, errorThrown) {
+  //     $(".show_msg").show();
+  //     $(".error_msg").html("server not responded");
+  //   });
                e.preventDefault();
 
 
