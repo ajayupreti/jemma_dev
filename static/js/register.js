@@ -446,7 +446,7 @@ function validationpassed3(e) {
     var ecrelation_val= $('.ecrelation').val();
 
     var objectad = {
-        Permanentaddr : paddrs_val ,
+        permanentaddr : paddrs_val ,
         city : pcity_val ,
         state : pstate_val ,
         pincode : ppincode_val ,
