@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+var obj;
 $('.form1').form({
      inline : true,
     on     : 'blur',
@@ -167,6 +167,8 @@ $.ajax({
                 $('.form-step2').show();
                 $('.tab1').removeClass('active');
                 $('.tab2').addClass('active');
+                obj = JSON.parse(data.api_key);
+
                 return false;
             }
             else
@@ -256,7 +258,7 @@ $.ajax({
     dataType: 'json',
     contentType: 'application/x-www-form-urlencoded; charset=utf-8',
     headers: {
-        "auth-key": "6622f740efd0069ef881062a7d8a3ae034f63321225d293be5b00943e09ecd89",
+        "authentication": obj,
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
     },
