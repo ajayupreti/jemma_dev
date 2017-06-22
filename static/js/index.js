@@ -109,6 +109,7 @@ $.ajax({
         if(data.STATUS=="SUCESS"){
            var noforms = data.cforms;
                 if(noforms==1){
+                  $(location).attr('href', 'http://104.198.18.135/jemma/register');
                     if (window.location.pathname == "http://104.198.18.135/jemma/register") {
                         $('.form-step1').hide();
                         $('.form-step2').show();
