@@ -258,7 +258,7 @@ $.ajax({
     dataType: 'json',
     contentType: 'application/x-www-form-urlencoded; charset=utf-8',
     headers: {
-        "authentication": obj,
+        "authentication": "obj",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
     },
