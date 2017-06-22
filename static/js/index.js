@@ -107,7 +107,54 @@ $.ajax({
     success: function (data) {
         console.info(data);
         if(data.STATUS=="SUCESS"){
-               $(location).attr('href', 'http://104.198.18.135/jemma/dashboard');
+           var noforms = data.cforms;
+                if(noforms==1){
+                    if (window.location.pathname == "http://104.198.18.135/jemma/register") {
+                        $('.form-step1').hide();
+                        $('.form-step2').show();
+                        $('.tab1').removeClass('active');
+                        $('.tab2').addClass('active');
+                        return false;
+                    } 
+
+                } 
+                else if(noforms==2){
+                        if (window.location.pathname == "http://104.198.18.135/jemma/register") {
+                        $('.form-step1').hide();
+                        $('.form-step2').show();
+                        $('.tab1').removeClass('active');
+                        $('.tab2').addClass('active');
+                        return false;
+                    } 
+
+                    }
+                  
+                }
+                else if(noforms==3){
+                        if (window.location.pathname == "http://104.198.18.135/jemma/register") {
+                        $('.form-step1').hide();
+                        $('.form-step2').show();
+                        $('.tab1').removeClass('active');
+                        $('.tab2').addClass('active');
+                        return false;
+                    } 
+
+                  
+                }                
+                else if(noforms==4){
+                        if (window.location.pathname == "http://104.198.18.135/jemma/register") {
+                        $('.form-step1').hide();
+                        $('.form-step2').show();
+                        $('.tab1').removeClass('active');
+                        $('.tab2').addClass('active');
+                        return false;
+                    } 
+
+                  
+                }
+                else if(noforms==5){
+                    $(location).attr('href', 'http://104.198.18.135/jemma/dashboard');
+                }
             }
             else{
               $(".show_msg").show();
