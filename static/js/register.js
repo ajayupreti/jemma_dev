@@ -585,12 +585,11 @@ $('.form4').form({
     var pancardno_val= $('.pancardno').val();
 
     var objectbd = {
-        accntholrname : accntholrname_va ,
+        accntholrname : accntholrname_val ,
         bankname : bankname_val ,
         accntno : accntno_val ,
         ifsccode : ifsccode_val ,
         pancardno : pancardno_val 
-
     }
 console.log(objectbd);
 $.ajax({
@@ -676,7 +675,7 @@ $.ajax({
     var mobileno_val = $('.mobileno').val();
 
     var objectsd = {
-        mobileno : mobileno 
+        mobileno : mobileno_val 
 
     }
 console.log(objectsd);
