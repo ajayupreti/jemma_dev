@@ -657,12 +657,39 @@ $.ajax({
               transition: 'fade down', 
               onSuccess: validationpassed6, 
               fields: {
-              mobileno: {
-              identifier  : 'mobileno',
+              mobile: {
+              identifier  : 'mobile',
               rules: [
               {
               type   : 'empty',
               prompt : 'Please enter your mobile no'
+              }
+              ]
+              },
+               twitter: {
+              identifier  : 'twitter',
+              rules: [
+              {
+              type   : 'empty',
+              prompt : 'Please enter twitter account details'
+              }
+              ]
+              },
+               linkedin: {
+              identifier  : 'linkedin',
+              rules: [
+              {
+              type   : 'empty',
+              prompt : 'Please enter linkedin account details'
+              }
+              ]
+              },
+               skype: {
+              identifier  : 'skype',
+              rules: [
+              {
+              type   : 'empty',
+              prompt : 'Please enter skype account details'
               }
               ]
               }
@@ -671,12 +698,16 @@ $.ajax({
               });
 
           function validationpassed6(e) {
-
+    var twitter_val = $('.twitter').val();
+    var linkedin_val = $('.linkedin').val();
     var mobileno_val = $('.mobileno').val();
+    var skype_val = $('.skype').val();
 
     var objectsd = {
-        mobileno : mobileno_val 
-
+        twitter : twitter_val,
+        linkedin : linkedin_val,
+        mobile : mobileno_val,
+        skype : skype_val
     }
 console.log(objectsd);
 $.ajax({

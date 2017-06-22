@@ -9,14 +9,14 @@
             <label>Linkedin Profile</label>
              <div class="ui left icon input">
             <i class="Linkedin Square icon"></i>
-            <input placeholder="Linkedin Profile link" name="first name" type="text">
+            <input placeholder="Linkedin Profile link" name="linkedin" class="linkedin" type="text">
             </div>
           </div>
           <div class="field">
             <label>Twitter Profile</label>
              <div class="ui left icon input">
             <i class="Twitter Square icon"></i>
-           <input placeholder="Twitter Profile link" name="last name" type="text">
+           <input placeholder="Twitter Profile link" name="twitter" class="twitter" type="text">
            </div>
           </div>
         </div>
@@ -25,14 +25,14 @@
             <label>Mobile Number</label>
              <div class="ui left icon input">
             <i class="Mobile icon"></i>
-            <input placeholder="Mobile Number" name="mobileno" class="mobileno" type="text">
+            <input placeholder="Mobile Number" name="mobile" class="mobileno" type="text">
             </div>
           </div>
           <div class="field">
             <label>Skype Profile</label>
             <div class="ui left icon input">
             <i class="Skype icon"></i>
-           <input placeholder="Skype Profile link" name="last name" type="text">
+           <input placeholder="Skype Profile link" name="skype" class="skype" type="text">
            </div>
           </div>
         </div>
