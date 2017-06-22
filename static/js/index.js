@@ -111,7 +111,7 @@ $.ajax({
            console.log(noforms);
                 if(noforms==1){
                   $(location).attr('href', 'http://104.198.18.135/jemma/register');
-                    
+                   console.log(noforms);
                         $('.form-step1').hide();
                         $('.form-step2').show();
                         $('.tab1').removeClass('active');
