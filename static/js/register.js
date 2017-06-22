@@ -246,25 +246,57 @@ function validationpassed2(e) {
       degree : degree_val ,
       college : college_val 
     }
-
-   var posting = $.post(mainurl+'register/2', objected);
-  console.log(objected);
-  posting.done(function(data){
-            if(data.status=="sucess"){
-                      $('.form-step2').hide();
-                      $('.form-step3').show();
-                      $('.tab2').removeClass('active');
-                      $('.tab3').addClass('active');
-                      return false;
+console.log(objected);
+$.ajax({
+    url: mainurl+'register/2',
+    type: 'POST',
+    data: objected,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
+    },
+    success: function (data) {
+      console.info(data);
+        if(data.STATUS=="SUCESS")
+            {
+               $('.form-step2').hide();
+                $('.form-step3').show();
+                $('.tab2').removeClass('active');
+                $('.tab3').addClass('active');
+                return false;
             }
-            else{
-              alert("error");
+            else
+            {
+             alert("error");
             }
-  });
-      posting.fail( function(xhr, textStatus, errorThrown) {
-      $(".show_msg").show();
-      $(".error_msg").html("server not responded");
-    });
+    },
+    error: function (data, status, error) {
+       $(".show_msg").show();
+       $(".error_msg").html("server not responded");
+    }
+});
+  //  var posting = $.post(mainurl+'register/2', objected);
+  // console.log(objected);
+  // posting.done(function(data){
+  //           if(data.status=="sucess"){
+  //                     $('.form-step2').hide();
+  //                     $('.form-step3').show();
+  //                     $('.tab2').removeClass('active');
+  //                     $('.tab3').addClass('active');
+  //                     return false;
+  //           }
+  //           else{
+  //             alert("error");
+  //           }
+  // });
+  //     posting.fail( function(xhr, textStatus, errorThrown) {
+  //     $(".show_msg").show();
+  //     $(".error_msg").html("server not responded");
+  //   });
   
        e.preventDefault();
 
