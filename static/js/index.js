@@ -99,7 +99,7 @@ $.ajax({
     crossDomain: true,
     crossOrigin: true,
     dataType: 'json',
-    contentType: 'application/json; charset=utf-8',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
     headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
