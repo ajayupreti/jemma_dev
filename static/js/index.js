@@ -110,24 +110,23 @@ $.ajax({
            var noforms = data.cforms;
                 if(noforms==1){
                   $(location).attr('href', 'http://104.198.18.135/jemma/register');
-                    if (window.location.pathname == "http://104.198.18.135/jemma/register") {
+                    
                         $('.form-step1').hide();
                         $('.form-step2').show();
                         $('.tab1').removeClass('active');
                         $('.tab2').addClass('active');
                         return false;
-                    } 
+                    
 
                 } 
                 else if(noforms==2){
-                        if (window.location.pathname == "http://104.198.18.135/jemma/register") {
-                        $('.form-step1').hide();
-                        $('.form-step2').show();
-                        $('.tab1').removeClass('active');
-                        $('.tab2').addClass('active');
+                     $(location).attr('href', 'http://104.198.18.135/jemma/register');
+                    
+                        $('.form-step2').hide();
+                        $('.form-step3').show();
+                        $('.tab2').removeClass('active');
+                        $('.tab3').addClass('active');
                         return false;
-                    } 
-
                     }
                   
                 
