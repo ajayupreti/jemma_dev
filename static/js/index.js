@@ -108,6 +108,7 @@ $.ajax({
         console.info(data);
         if(data.STATUS=="SUCESS"){
            var noforms = data.cforms;
+           console.log(noforms);
                 if(noforms==1){
                   $(location).attr('href', 'http://104.198.18.135/jemma/register');
                     
