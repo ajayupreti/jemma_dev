@@ -130,7 +130,7 @@ $.ajax({
 
                     }
                   
-                }
+                
                 else if(noforms==3){
                         if (window.location.pathname == "http://104.198.18.135/jemma/register") {
                         $('.form-step1').hide();
