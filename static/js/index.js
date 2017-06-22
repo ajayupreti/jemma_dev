@@ -107,7 +107,7 @@ $.ajax({
     success: function (data) {
         console.info(data);
         if(data.STATUS=="SUCESS"){
-               $(location).attr('href', 'http://104.198.18.135/jemma/dashboard.php');
+               $(location).attr('href', 'http://104.198.18.135/jemma/dashboard');
             }
             else{
               $(".show_msg").show();
