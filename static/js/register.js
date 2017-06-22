@@ -167,7 +167,7 @@ $.ajax({
                 $('.form-step2').show();
                 $('.tab1').removeClass('active');
                 $('.tab2').addClass('active');
-                obj = JSON.parse(data.api_key);
+                obj = data.api_key;
 
                 return false;
             }
