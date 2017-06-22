@@ -22,8 +22,11 @@ function getdata()
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
     },
-    success: function (response) {
-      $( "input[name*='firstname']" ).html(response.first_name);
+    success: function (data) {
+   if(data.STATUS=="SUCESS"){
+              
+      $( "input[name*='firstname']" ).html(data.first_name);
+  	}
     },
     error: function (data, status, error) {
       console.log('error', data, status, error);
