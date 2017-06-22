@@ -7,7 +7,9 @@ function employees(){
 	$('.employees_box').show();
 
 }
-function getdata(){
+function getdata()
+{
+
  $.ajax({
     url: mainurl+'dashboard',
     type: 'POST',
@@ -22,6 +24,9 @@ function getdata(){
     },
     success: function (response) {
       $( "input[name*='firstname']" ).html(response.first_name);
+    },
+    error: function (data, status, error) {
+      console.log('error', data, status, error);
     }
   });
 
