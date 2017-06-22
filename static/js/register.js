@@ -711,7 +711,7 @@ $.ajax({
     }
 console.log(objectsd);
 $.ajax({
-    url: mainurl+'register/6',
+    url: mainurl+'register/5',
     type: 'POST',
     data: objectsd,
     crossDomain: true,
