@@ -13,13 +13,12 @@ function getdata()
  $.ajax({
     url: mainurl+'dashboard',
     type: 'POST',
-    data: '{}',
     crossDomain: true,
     crossOrigin: true,
     dataType: 'json',
     contentType: 'application/x-www-form-urlencoded; charset=utf-8',
     headers: {
-    	"Authorization": "6622f740efd0069ef881062a7d8a3ae034f63321225d293be5b00943e09ecd89",
+    	"Authorization": "6622f740efd0069ef881062a7d8a3ae034f63321225d293be5b00943e09ecd89",	
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
     },
