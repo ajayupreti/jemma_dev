@@ -1,1 +1,1 @@
- var mainurl= 'http://api.crownstack.com/';
+ var mainurl= 'http://104.198.18.135/';

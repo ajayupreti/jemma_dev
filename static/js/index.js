@@ -91,34 +91,59 @@ var objectl = {
   email : email_val ,
   password : password_val
 }
-
-
- var posting = $.post(mainurl+'login/login_user', objectl , function(response) {  //ERROR POINTS THIS LINE
-    response.setContentType("application/json");
-    response.setCharacterEncoding("UTF-8");
-    response.setHeader("Access-Control-Allow-Credentials", "true");
-    response.setHeader("Access-Control-Allow-Origin", "api.crownstack.com");
-    response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-    response.setHeader("Access-Control-Max-Age", "3600");
-    response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
-
-    });
-  console.log(objectl);
-  posting.done(function(data){
-            if(data.status=="sucess"){
+console.log(objectl);
+$.ajax({
+    url: mainurl+'login',
+    type: 'POST',
+    data: objectl,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    contentType: 'application/json; charset=utf-8',
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE"
+    },
+    success: function (data) {
+        console.info(data);
+        if(data.status=="sucess"){
                $(location).attr('href', 'http://localhost/jemaaa/jemma/dashboard.php');
             }
             else{
               $(".show_msg").show();
               $(".error_msg").html("user not registered");
-
             }
-  });
+    },
+    error: function (data, status, error) {
+      console.log('error', data, status, error);
+    }
+});
+ // var posting = $.post(mainurl+'login', objectl , function(response) {  //ERROR POINTS THIS LINE
+ //    response.setContentType("application/json");
+ //    response.setCharacterEncoding("UTF-8");
+ //    response.setHeader("Access-Control-Allow-Credentials", "true");
+ //    response.setHeader("Access-Control-Allow-Origin", "*");
+ //    response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+ //    response.setHeader("Access-Control-Max-Age", "3600");
+ //    response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
 
-    posting.fail( function(xhr, textStatus, errorThrown) {
-      $(".show_msg").show();
-      $(".error_msg").html("server not responded");
-    });
+ //    });
+ //  console.log(objectl);
+ //  posting.done(function(data){
+ //            if(data.status=="sucess"){
+ //               $(location).attr('href', 'http://localhost/jemaaa/jemma/dashboard.php');
+ //            }
+ //            else{
+ //              $(".show_msg").show();
+ //              $(".error_msg").html("user not registered");
+
+ //            }
+ //  });
+
+ //    posting.fail( function(xhr, textStatus, errorThrown) {
+ //      $(".show_msg").show();
+ //      $(".error_msg").html("server not responded");
+ //    });
  e.preventDefault();
 
 }
