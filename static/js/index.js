@@ -106,7 +106,7 @@ $.ajax({
     },
     success: function (data) {
         console.info(data);
-        if(data.status=="sucess"){
+        if(data.status=="SUCESS"){
                $(location).attr('href', 'http://localhost/jemaaa/jemma/dashboard.php');
             }
             else{
