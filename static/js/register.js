@@ -697,11 +697,11 @@ $.ajax({
 
               });
 
-          function validationpassed6(e) {
-    var twitter_val = $('.twitter').val();
-    var linkedin_val = $('.linkedin').val();
+    function validationpassed6(e) {
+    var twitter_val = $('.twitterid').val();
+    var linkedin_val = $('.linkedinid').val();
     var mobileno_val = $('.mobileno').val();
-    var skype_val = $('.skype').val();
+    var skype_val = $('.skypeid').val();
 
     var objectsd = {
         twitter : twitter_val,
